@@ -1,0 +1,46 @@
+﻿Ticker,Fund Name,Segment,1 YR Return,Expense Ratio,AUM (Assets Under Management)
+XLE,Energy Select Sector SPDR Fund,Equity: U.S. Energy,14.90%,0.09%,$37.77B
+AMLP,Alerian MLP ETF,Equity: U.S. MLPs,23.90%,0.85%,$10.01B
+VDE,Vanguard Energy ETF,Equity: U.S. Energy,15.20%,0.10%,$8.35B
+XOP,SPDR S&P Oil & Gas Exploration & Production ETF,"Equity: U.S. Oil, Gas & Consumable Fuels",6.00%,0.35%,$2.70B
+MLPX,Global X MLP & Energy Infrastructure ETF,Equity: U.S. MLPs,46.00%,0.45%,$2.47B
+MLPA,Global X MLP ETF,Equity: U.S. MLPs,20.90%,0.45%,$1.72B
+FENY,Fidelity MSCI Energy Index ETF,Equity: U.S. Energy,15.30%,0.08%,$1.64B
+IYE,iShares U.S. Energy ETF,Equity: U.S. Energy,15.10%,0.39%,$1.35B
+TPYP,Tortoise North American Pipeline Fund,Equity: U.S. MLPs,42.80%,0.40%,$683.02M
+IEO,iShares U.S. Oil & Gas Exploration & Production ETF,Equity: U.S. Oil & Gas Exploration & Production,6.90%,0.40%,$648.93M
+VGT,Vanguard Information Technology ETF,Equity: U.S. Information Technology,36.90%,0.10%,$83.58B
+XLK,Technology Select Sector SPDR Fund,Equity: U.S. Information Technology,28.60%,0.09%,$72.10B
+IYW,iShares U.S. Technology ETF,Equity: U.S. Information Technology,38.30%,0.39%,$19.44B
+SOXX,iShares Semiconductor ETF,Equity: U.S. Semiconductors,28.60%,0.35%,$13.93B
+FTEC,Fidelity MSCI Information Technology Index ETF,Equity: U.S. Information Technology,37.00%,0.08%,$13.02B
+SOXL,Direxion Daily Semiconductor Bull 3x Shares,Leveraged Equity: U.S. Semiconductors,29.80%,0.76%,$10.95B
+NVDL,GraniteShares 2x Long NVDA Daily ETF,Leveraged Equity: U.S. Semiconductors,433.90%,1.06%,$5.69B
+QTEC,First Trust NASDAQ-100 Technology Sector Index Fund,Equity: U.S. Information Technology,22.80%,0.57%,$3.95B
+SKYY,First Trust Cloud Computing ETF,Equity: U.S. Software & Services,47.20%,0.60%,$3.64B
+RSPT,Invesco S&P 500 Equal Weight Technology ETF,Equity: U.S. Information Technology,28.30%,0.40%,$3.55B
+XLF,Financial Select Sector SPDR Fund,Equity: U.S. Financials,41.80%,0.09%,$52.79B
+VFH,Vanguard Financials ETF,Equity: U.S. Financials,44.20%,0.10%,$12.03B
+KRE,SPDR S&P Regional Banking ETF,Equity: U.S. Regional Banks,44.60%,0.35%,$5.55B
+IYF,iShares U.S. Financials ETF,Equity: U.S. Financials,45.70%,0.39%,$3.93B
+FAS,Direxion Daily Financial Bull 3x Shares,Leveraged Equity: U.S. Financials,138.60%,0.94%,$2.94B
+KBWB,Invesco KBW Bank ETF,Equity: U.S. Banks,60.10%,0.35%,$2.80B
+KBE,SPDR S&P Bank ETF,Equity: U.S. Financials,48.60%,0.35%,$2.62B
+FNCL,Fidelity MSCI Financials Index ETF,Equity: U.S. Financials,44.10%,0.08%,$2.12B
+IAI,iShares U.S. Broker-Dealers & Securities Exchanges ETF,Equity: U.S. Capital Markets,54.10%,0.40%,$1.77B
+IYG,iShares US Financial Services ETF,Equity: U.S. Financials,45.90%,0.39%,$1.66B
+XLP,Consumer Staples Select Sector SPDR Fund,Equity: U.S. Consumer Staples,19.80%,0.09%,$16.79B
+VDC,Vanguard Consumer Staples ETF,Equity: U.S. Consumer Staples,21.90%,0.10%,$7.33B
+IYK,iShares U.S. Consumer Staples ETF,Equity: U.S. Consumer Staples,12.80%,0.40%,$1.36B
+FSTA,Fidelity MSCI Consumer Staples Index ETF,Equity: U.S. Consumer Staples,21.90%,0.08%,$1.26B
+FXG,First Trust Consumer Staples AlphaDEX Fund,Equity: U.S. Consumer Staples,15.20%,0.63%,$404.41M
+RSPS,Invesco S&P 500 Equal Weight Consumer Staples ETF,Equity: U.S. Consumer Staples,6.10%,0.40%,$310.03M
+PBJ,Invesco Food & Beverage ETF,Equity: U.S. Consumer Staples,11.40%,0.62%,$112.30M
+PSL,Invesco Dorsey Wright Consumer Staples Momentum ETF,Equity: U.S. Consumer Staples,29.10%,0.60%,$95.82M
+PSCC,Invesco S&P SmallCap Consumer Staples ETF,Equity: U.S. Consumer Staples,15.40%,0.29%,$54.78M
+FTXG,First Trust Nasdaq Food & Beverage ETF,"Equity: U.S. Food, Beverage & Tobacco",5.50%,0.60%,$31.94M
+XBI,SPDR S&P BIOTECH ETF,Equity: U.S. Biotechnology,25.70%,0.35%,$7.29B
+IBB,iShares Biotechnology ETF,Equity: U.S. Biotechnology,14.60%,0.45%,$6.97B
+FBT,First Trust NYSE Arca Biotechnology Index Fund,Equity: U.S. Biotechnology,20.10%,0.56%,$1.19B
+LABU,Direxion Daily S&P Biotech Bull 3X Shares,Leveraged Equity: U.S. Biotechnology,41.30%,0.96%,$892.68M
+BBC,Virtus LifeSci Biotech Clinical Trials ETF,Equity: U.S. Biotechnology,-2.60%,0.79%,$22.89M
