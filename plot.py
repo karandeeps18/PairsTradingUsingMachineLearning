@@ -6,7 +6,6 @@ import seaborn as sns
 from statsmodels.tsa.stattools import adfuller
 from scipy.stats import linregress
 
-# Ensure the plots folder exists
 PLOTS_FOLDER = "plots"
 os.makedirs(PLOTS_FOLDER, exist_ok=True)
 
@@ -111,7 +110,7 @@ def plot_adf_test_spread_returns(selected_pairs, preprocessed_etfs):
         # Calculate spread returns
         spread_returns = spread.pct_change().dropna()
 
-        # Perform ADF test
+        # ADF test
         adf_result = adfuller(spread_returns)
         
         # Plot spread returns
@@ -122,7 +121,7 @@ def plot_adf_test_spread_returns(selected_pairs, preprocessed_etfs):
         plt.ylabel("Spread Returns")
         plt.grid(True)
 
-        # Add ADF statistic and p-value as text
+        # Add ADF statistic and p-value to plot
         plt.text(len(spread_returns) // 2, spread_returns.mean(), 
                  f"ADF Statistic: {adf_result[0]:.2f}\nP-Value: {adf_result[1]:.2g}",
                  bbox=dict(facecolor='white', alpha=0.5), fontsize=10)
@@ -134,12 +133,10 @@ if __name__ == "__main__":
     # File paths
     selected_pairs_path = "all_selected_pairs.csv"
     time_series_path = "preprocessed_etfs.csv"
-
-    # Load data
     selected_pairs = pd.read_csv(selected_pairs_path)
     preprocessed_etfs = pd.read_csv(time_series_path, index_col=0, parse_dates=True)
 
-    # Generate plots
+    # plots
     plot_correlation_heatmap(preprocessed_etfs)
     plot_spread_distribution(selected_pairs, preprocessed_etfs)
     plot_hurst_boxplot(selected_pairs)
