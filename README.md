@@ -55,7 +55,7 @@ Metrics tracked during backtesting:
 - Profit & Loss
 - Trade Count
 
-### 📈 LSTM vs Statistical Model  
+### LSTM vs Statistical Model  
 - **LSTM Strategy** outperforms traditional momentum-based pairs trading with:
   - Higher Sharpe (2.05 vs 0.93)
   - Lower Drawdown (−10.47% vs −13.53%)
