@@ -23,6 +23,18 @@ our approach enhances traditional methods through unsupervised learning and temp
 
 ### 1. Pair Selection Framework
 
+### Backtesting Methodology: Rolling Window Framework
+The model uses a walk-forward validation approach with an **embargo period** to prevent lookahead bias (as per Marcos López de Prado).
+
+| Stage | Formation (Train) | Validation | Embargo | Trading (Test) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Stage 1** | 24 Months | 3 Months | 2 Days | 6 Months |
+| **Stage 2** | 24 Months | 3 Months | 2 Days | 6 Months |
+| **Stage 3** | 24 Months | 3 Months | 2 Days | 6 Months |
+| **Stage 4** | 24 Months | 3 Months | 2 Days | 6 Months |
+| **Stage 5** | 24 Months | 3 Months | 2 Days | 6 Months |
+
+
 We implement 3 strategies to select statistically valid pairs:
 
 
