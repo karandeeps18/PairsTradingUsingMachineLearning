@@ -63,20 +63,6 @@ Metrics tracked during backtesting:
   - Higher Sharpe (2.05 vs 0.93)
   - Lower Drawdown (−10.47% vs −13.53%)
 
----
-
-## Requirements
-
-- Python 3.8+
-- pandas, numpy, matplotlib, seaborn
-- scikit-learn, statsmodels, ta
-- tensorflow/keras for LSTM
-
--- 
-
-## License
-This repository is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
-
 
 
 
