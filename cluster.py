@@ -1,45 +1,35 @@
-import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-# Ensure the plots folder exists
-PLOTS_FOLDER = "plots"
-os.makedirs(PLOTS_FOLDER, exist_ok=True)
+# Quick setup
+os.makedirs("plots", exist_ok=True)
 
-def plot_time_series_by_cluster(selected_pairs, preprocessed_etfs):
-    """Plot time series of all selected pairs grouped by OPTICS cluster."""
-    clusters = selected_pairs['Cluster'].unique()
+# Load data - skipping the formal main() block
+pairs = pd.read_csv("all_selected_pairs.csv")
+prices = pd.read_csv("preprocessed_etfs.csv", index_col=0, parse_dates=True)
 
-    for cluster in clusters:
-        cluster_pairs = selected_pairs[selected_pairs['Cluster'] == cluster]
+# Group by cluster to see how the OPTICS algorithm actually behaved
+for cluster, group in pairs.groupby('Cluster'):
+    plt.figure(figsize=(12, 7))
+    
+    for _, row in group.iterrows():
+        # Clean up the pair string from the CSV
+        p_text = row['Pair'].replace("(", "").replace(")", "").replace("'", "")
+        t1, t2 = [t.strip() for t in p_text.split(',')]
+        
+        # Normalize to 1.0 for visual comparison
+        # (Using .iloc[0] is standard, but some quants use .mean() to avoid base-day bias)
+        p1 = prices[f"{t1}_adj_close"] / prices[f"{t1}_adj_close"].iloc[0]
+        p2 = prices[f"{t2}_adj_close"] / prices[f"{t2}_adj_close"].iloc[0]
+        
+        plt.plot(p1, alpha=0.6, label=t1)
+        plt.plot(p2, alpha=0.6, label=t2)
+    
+    plt.title(f"Cluster {cluster}: Convergence Check")
+    plt.legend(ncol=2, fontsize='small') # Practical: clusters can have many lines
+    plt.grid(alpha=0.3)
+    plt.savefig(f"plots/cluster_{cluster}_check.png")
+    plt.close()
 
-        plt.figure(figsize=(12, 8))
-        for _, pair_row in cluster_pairs.iterrows():
-            pair_str = pair_row['Pair'].strip("()").replace("'", "").split(", ")
-            etf1, etf2 = pair_str[0].strip(), pair_str[1].strip()
-
-            ts1 = preprocessed_etfs[f"{etf1}_adj_close"] / preprocessed_etfs[f"{etf1}_adj_close"].iloc[0]
-            ts2 = preprocessed_etfs[f"{etf2}_adj_close"] / preprocessed_etfs[f"{etf2}_adj_close"].iloc[0]
-
-            plt.plot(ts1, label=f"{etf1} (Cluster {cluster})", alpha=0.7)
-            plt.plot(ts2, label=f"{etf2} (Cluster {cluster})", alpha=0.7)
-
-        plt.title(f"Normalized Time Series for Cluster {cluster}")
-        plt.xlabel("Date")
-        plt.ylabel("Normalized Price")
-        plt.legend()
-        plt.grid(True)
-        plt.savefig(os.path.join(PLOTS_FOLDER, f"time_series_cluster_{cluster}.png"))
-        plt.close()
-
-if __name__ == "__main__":
-    # File paths
-    selected_pairs_path = "all_selected_pairs.csv"
-    time_series_path = "preprocessed_etfs.csv"
-
-    # Load data
-    selected_pairs = pd.read_csv(selected_pairs_path)
-    preprocessed_etfs = pd.read_csv(time_series_path, index_col=0, parse_dates=True)
-
-    # Generate plots
-    plot_time_series_by_cluster(selected_pairs, preprocessed_etfs)
+print("Cluster plots generated.")
