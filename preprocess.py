@@ -11,15 +11,6 @@ This script performs the following tasks:
 5. Removes ETFs with constant 'Adj_Close' data (no variance).
 6. Saves the preprocessed 'Adj_Close' data to 'Adj_Close_ETFs.csv' for use in pair selection scripts.
 7. Logs the removed ETFs for auditing purposes.
-
-Ensure that you have installed the required libraries before running this script:
-    pip install pandas
-
-Usage:
-    python preprocess_etf_data.py
-
-Author: [Your Name]
-Date: [Today's Date]
 """
 
 import pandas as pd
