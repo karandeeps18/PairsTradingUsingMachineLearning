@@ -1,7 +1,9 @@
 #  Pairs Trading Using Machine Learning
 
 This repository implements a robust framework for market-neutral pairs trading using a combination of **statistical techniques**, **theme-based clustering**, and **unsupervised learning (OPTICS)** for pair selection, followed by **LSTM modeling** for spread prediction and trading signal generation.
-This project is the part of Fall 2024 Advanced Machine Learning (QFGB-890H-001) 
+This project is the part of Fall 2024 Advanced Machine Learning (QFGB-890H-001)
+<img width="487" height="352" alt="model_specification" src="https://github.com/user-attachments/assets/b548f017-0f2f-4858-bd56-c1c6b8d1c298" />
+
 
 ##  Overview
 
@@ -22,6 +24,7 @@ our approach enhances traditional methods through unsupervised learning and temp
 ### 1. Pair Selection Framework
 
 We implement 3 strategies to select statistically valid pairs:
+
 
 - **No Clustering (Statistical Criteria)**  
   - Correlation ≥ 0.8  
