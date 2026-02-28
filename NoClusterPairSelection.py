@@ -18,7 +18,7 @@ def select_pairs_no_clustering(formation_data, formation_start_date, formation_e
     # Generate all possible pairs n(n-1)
     pairs = list(combinations(etf_names, 2))
     pair_results = []
-    discrete_lags = [20, 50, 100, 200]  # Define lags for Hurst computation
+    discrete_lags = [20, 50, 100, 200]  #  lags for Hurst computation
 
     # Calculate statistics for each pair
     for pair in pairs:
@@ -64,7 +64,7 @@ def select_pairs_no_clustering(formation_data, formation_start_date, formation_e
         (results_df['Correlation'] >= correlation_threshold) &
         (results_df['Cointegration_PValue'] <= cointegration_pvalue_threshold) &
         (results_df['Spread_STD'] <= spread_std_threshold) &
-        (results_df['Average_Hurst'] < 0.5) &  # Example criterion for Hurst Exponent
+        (results_df['Average_Hurst'] < 0.5) &                       #  criterion for Hurst Exponent 0.5 for half life value 
         (results_df['Half_Life'] >= min_half_life) &
         (results_df['Half_Life'] <= max_half_life)
     ]
